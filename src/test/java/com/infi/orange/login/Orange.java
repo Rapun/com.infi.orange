@@ -40,6 +40,10 @@ public class Orange {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		String t = driver.findElement(By.xpath("//*[@id=\"employeeListTable\"]/tbody/tr")).getText();
 		System.out.println(t);
+		
+		driver.findElement(By.xpath("//i[text()='keyboard_arrow_down']")).click();
+		driver.findElement(By.xpath("//a[@id='logoutLink']")).click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 
